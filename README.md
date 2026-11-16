@@ -21,4 +21,9 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 
 Fill in alone or with help honestly, and put a date in the Redone column after you re-solve it.
 
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | frequency counter (Set) | O(n) | O(n) | alone | |
+# LeetCode Progress Tracker
+
+| # | Problem | Difficulty | Pattern / Approach | Time | Space | Status | Redone | Notes |
+| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 217 | Contains Duplicate | Easy | Frequency Counter (Set) | O(n) | O(n) | Alone | 2026-11-16 | |
+| 1 | Two Sum | Easy | Hash Map | O(n) | O(n) | With Help | | |
