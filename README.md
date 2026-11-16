@@ -8,13 +8,9 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 - Solved shows `alone` or `with help`, with no faking.
 
 ## Progress
-
-| # | Problem | Difficulty | Pattern | Time | Space | Solved | Redone |
-|---|---------|------------|---------|------|-------|--------|--------|
-
-| # | Problem | Difficulty | Pattern  | Time | Space | Status | Redone | Notes |
-| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 217 | Contains Duplicate | Easy | Frequency Counter (Set) | O(n) | O(n) | Alone | 2026-11-16 | |
+| # | Problem | Difficulty | Pattern | Time | Space | Solved | First solved | Redone | Notes |
+|---|---------|------------|---------|------|-------|--------|--------------|--------|-------|
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Frequency counter (Set) | O(n) | O(n) | alone | 2026-11-16 | | Overbuilt counts and indexes first; only true/false was needed |
 
 ## Folders
 - `arrays-and-objects/`
