@@ -12,6 +12,10 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 | # | Problem | Difficulty | Pattern | Time | Space | Solved | Redone |
 |---|---------|------------|---------|------|-------|--------|--------|
 
+| # | Problem | Difficulty | Pattern  | Time | Space | Status | Redone | Notes |
+| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 217 | Contains Duplicate | Easy | Frequency Counter (Set) | O(n) | O(n) | Alone | 2026-11-16 | |
+
 ## Folders
 - `arrays-and-objects/`
 - `frequency-counter/`
@@ -20,10 +24,3 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 - `recursion/`
 
 Fill in alone or with help honestly, and put a date in the Redone column after you re-solve it.
-
-# LeetCode Progress Tracker
-
-| # | Problem | Difficulty | Pattern / Approach | Time | Space | Status | Redone | Notes |
-| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 217 | Contains Duplicate | Easy | Frequency Counter (Set) | O(n) | O(n) | Alone | 2026-11-16 | |
-| 1 | Two Sum | Easy | Hash Map | O(n) | O(n) | With Help | | |
