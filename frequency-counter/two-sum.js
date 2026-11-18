@@ -4,7 +4,7 @@ https://leetcode.com/problems/two-sum/
  Pattern: Hash map (complement lookup
  Idea: For each number, look up target - number in a map of numbers I've already seen. If found, return both indexes; otherwise store this number.
  Time: O(n)   Space: O(n)
- What tripped me: this first idea  Create two pointer when slow and when is fast and check on each time slow plus fast is equal target and return 2 index. but is becomie time n^2. we going using map seen and loop going through using maths insteed slow + fast = target to need = target - slow
+ What tripped me: First version stored the number before checking, so a number matched itself and returned [0, 0]. Check first, then store.
 
   Plan:
  1. Create map to stored to seen element
