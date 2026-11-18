@@ -1,6 +1,6 @@
 /*
  1480. Running Sum of 1d Array
- https://leetcode.com
+https://leetcode.com/problems/running-sum-of-1d-array/submissions/2198544423/
  Pattern: Prefix Sum (In-Place)
  Idea: Iterate through the array and add the previous element's running total to the current element.
  Time: O(n)   Space: O(1)
