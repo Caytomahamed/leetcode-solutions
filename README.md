@@ -16,6 +16,7 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 | [217](arrays-and-objects/217-contains-duplicate.js) | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Frequency counter (Set) | O(n) | O(n) | alone | 2026-11-16 | 2026-11-17 | Overbuilt counts and indexes first; only true/false was needed |
 | [1480](arrays-and-objects/1480-running-sum.js) | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy | Prefix sum | O(n) | O(1) extra | alone | 2026-11-17 | | Starting at index 1 avoids the i == 0 check |
 | [242](frequency-counter/242-valid-anagram.js) | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | Frequency counter | O(n) | O(1) | alone | 2026-11-17 | | |
+| [1](arrays-and-objects/1-two-sum.js) | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Hash map (complement lookup) | O(n) | O(n) | alone | 2026-11-17 | | Brute force was O(n²); the map brings it to O(n) |
 
 ## Planned folders
 
