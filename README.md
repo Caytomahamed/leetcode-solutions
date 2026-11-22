@@ -20,6 +20,9 @@ LeetCode solutions, each with a note on the pattern and what tripped me up.
 
 | [387](frequency-counter/387-first-unique-character-in-a-string.js) | [First Unique Character in a String](https://leetcode.com) | Easy | Hash map (frequency counter / index grouping) | O(n) | O(1) | alone | 2026-11-19 | | JS Map preserves insertion order, so the first entry with length/count 1 is immediately the answer without tracking a minimum index |
 | [3005](frequency-counter/3005-count-elements-with-maximum-frequency.js) | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency) | Easy | Hash Map (frequency counter) | O(n) | O(n) | assisted | 2026-11-22 | Terrible LeetCode wording. You have to find the max frequency (mode count) and sum up all frequencies matching that max (e.g., if two numbers appear 2 times, return 2 + 2 = 4). |
+|(frequency-counter/1207-unique-number-of-occurrences.js) | [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/) | Easy | Hash Map / Frequency Counter / Set | O(n) | O(n) | alone | 2026-11-22 | Super clean use of Set to verify if the frequency counts contain any duplicates. |
+
+|(frequency-counter/347-top-k-frequent-elements.js) | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | Hash Map (frequency counter) + Matrix Sorting | O(n log n) | O(n) | alone | 2026-11-22 | Mastered map-to-array entry sorting. Implemented an advanced fallback tie-breaker constraint directly inside the sort callback. |
 
 ## Planned folders
 

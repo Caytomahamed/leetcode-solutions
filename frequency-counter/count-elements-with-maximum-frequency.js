@@ -51,3 +51,4 @@ var maxFrequencyElements = function(nums) {
 
    return totalFrequencies;
 };
+
