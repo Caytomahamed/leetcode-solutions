@@ -42,3 +42,45 @@ console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2)); // [ 1, 2 ]
 console.log(topKFrequent([4, 1, -1, 2, -1, 2, 3], 2)); // [ -1, 2 ]
 console.log(topKFrequent([1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2)); // [ 1, 2 ]
 console.log(topKFrequent([3, 0, 1, 0], 1)); // [ 0 ]
+
+
+// BETTER
+
+/**
+ * 347. Top K Frequent Elements
+ * Pattern: Hash Map (Frequency Counter) + Bucket Sort
+ * Idea: Count frequencies, then place each distinct number into a bucket
+ *       indexed by its frequency. Walk buckets from highest frequency down,
+ *       collecting numbers until we have k.
+ * Time: O(n) — counting is O(n), bucketing is O(d), draining is O(d).
+ * Space: O(n) — buckets array of length n+1.
+ */
+// var topKFrequent = function (nums, k) {
+//   // 1. Count frequencies
+//   const count = new Map();
+//   for (const n of nums) count.set(n, (count.get(n) || 0) + 1);
+
+//   // 2. Build buckets: buckets[freq] = [numbers appearing freq times]
+//   //    Length = n + 1 because max possible frequency is n (all same element)
+//   const buckets = Array.from({ length: nums.length + 1 }, () => []);
+//   for (const [num, freq] of count) {
+//     buckets[freq].push(num);
+//   }
+
+//   // 3. Drain from highest frequency down until we have k elements
+//   const res = [];
+//   for (let freq = buckets.length - 1; freq >= 0 && res.length < k; freq--) {
+//     for (const num of buckets[freq]) {
+//       res.push(num);
+//       if (res.length === k) break;
+//     }
+//   }
+
+//   return res;
+// };
+
+// // Tests
+// console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2));              // [1, 2] or [2, 1]
+// console.log(topKFrequent([4, 1, -1, 2, -1, 2, 3], 2));         // [-1, 2] or [2, -1]
+// console.log(topKFrequent([1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2));  // [1, 2] or [2, 1]
+// console.log(topKFrequent([3, 0, 1, 0], 1));                    // [0]
