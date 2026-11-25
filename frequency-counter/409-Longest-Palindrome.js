@@ -1,36 +1,29 @@
 /**
- * @param {string} s
- * @return {number}
+ * 409. Longest Palindrome
+ * Pattern: frequency counter
+ * Idea: a palindrome is made of pairs, plus at most one letter in the middle.
+ *       Count each letter and take its pairs. If any letter has a leftover,
+ *       add 1 for the middle.
+ * Time: O(n)  Space: O(1) (the Map holds at most 52 letters, a fixed number)
  */
 var longestPalindrome = function (s) {
   const freq = new Map();
-  let countPalindrome = 0;
-  let hasOddCount = false;
 
-  for (const char of s) {
-    freq.set(char, (freq.get(char) || 0) + 1);
+  for (const ch of s) {
+    freq.set(ch, (freq.get(ch) || 0) + 1);
   }
+
+  let length = 0;
+  let hasLeftover = false;
 
   for (const count of freq.values()) {
-    // Math.floor(count / 2) * 2 gives you the largest even number less than or equal to count
-    // e.g., if count is 3: 3 / 2 = 1.5 -> floor is 1 -> 1 * 2 = 2.
-    countPalindrome += Math.floor(count / 2) * 2;
-
-    // If there is any leftover odd remainder, we track it
-    if (count % 2 !== 0) {
-      hasOddCount = true;
-    }
+    length += Math.floor(count / 2) * 2; // letters that make pairs
+    if (count % 2 !== 0) hasLeftover = true; // one letter is left over
   }
 
-  // If we found at least one odd character frequency,
-  // we can place exactly one unique character in the dead center.
-  if (hasOddCount) {
-    countPalindrome += 1;
-  }
-
-  return countPalindrome;
+  return hasLeftover ? length + 1 : length;
 };
 
-console.log(longestPalindrome('abccccdd')); // Output: 7 (e.g., "dccaccd")
-console.log(longestPalindrome('a')); // Output: 1
-console.log(longestPalindrome('ccc')); // Output: 3 (Uses all 3)
+console.log(longestPalindrome('abccccdd')); // 7
+console.log(longestPalindrome('a')); // 1
+console.log(longestPalindrome('ccc')); // 3

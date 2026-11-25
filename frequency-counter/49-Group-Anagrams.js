@@ -1,26 +1,25 @@
 /**
- * @param {string[]} strs
- * @return {string[][]}
+ * 49. Group Anagrams
+ * Pattern: Map with a shared key
+ * Idea: anagrams have the same letters, so sorting the letters of each
+ *       word gives the same key. Words with the same key go in one group.
+ * Time: O(n * k log k)  (n words, k = longest word length)
+ * Space: O(n * k)
  */
 var groupAnagrams = function (strs) {
-  // make map and stored on each arra on its count
   const groups = new Map();
 
-  // loop through all string and stored the count
-  for (const str of strs) {
-    // 1. Sort the string to create a uniform key (e.g., "tea" -> "aet")
-    const sortedKey = str.split('').sort().join('');
+  for (const word of strs) {
+    const key = word.split('').sort().join(''); // "eat" -> "aet"
 
-    // 2. If the key doesn't exist, initialize an empty array
-    if (!groups.has(sortedKey)) {
-      groups.set(sortedKey, []);
-    }
-
-    // 3. Push the full original string into the array
-    groups.get(sortedKey).push(str);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(word);
   }
 
-  return [...groups.values()]
+  return [...groups.values()];
 };
 
 console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+// [["eat","tea","ate"],["tan","nat"],["bat"]]
+console.log(groupAnagrams([''])); // [[""]]
+console.log(groupAnagrams(['a'])); // [["a"]]
